@@ -1,0 +1,34 @@
+language: python
+env:
+    - REPO=tensorflow/benchmarks
+    - REPO=tensorflow/cleverhans
+    - REPO=tensorflow/fold
+    - REPO=tensorflow/magenta
+    - REPO=tensorflow/models
+    - REPO=tensorflow/nmt
+    - REPO=tensorflow/skflow
+    - REPO=tensorflow/tensor2tensor
+    - REPO=tensorflow/tensorboard
+    - REPO=tensorflow/tensorboard-plugin-example
+    - REPO=tensorflow/tpu-demos
+    - REPO=tensorflow/transform
+python:
+    - 2.7.13
+    - 3.6
+cache: pip
+install:
+    - pip install hacking  # pytest  # add other testing frameworks later
+before_script:
+    - URL=https://github.com/${REPO}
+    - echo ; echo -n "flake8 testing of ${URL} on " ; python -V
+    - git clone --depth=50 --branch=master ${URL} ~/${REPO}
+    - cd ~/${REPO}
+script:
+    - echo stop the build if there are Python syntax errors or undefined names
+    - echo ; echo -n "flake8 testing of ${URL} on " ; python -V
+    - time flake8 . --count --select=E901,E999,F821,F822,F823 --show-source --statistics
+    - echo exit-zero treats all errors as warnings.  The GitHub editor is 127 chars wide
+    - time flake8 . --count --exit-zero --max-complexity=10 --max-line-length=127 --statistics
+notifications:
+    on_success: change
+    on_failure: change  # `always` will be the setting once code changes slow down
