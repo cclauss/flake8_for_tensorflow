@@ -1,4 +1,4 @@
-# flake8_for_tensorflow
+# flake8 for Tensorflow
 Runs flake8 tests on those Tensorflow repos that are based on Python.
 
 * [ ] tensorflow/benchmarks
