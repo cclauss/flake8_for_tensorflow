@@ -1,15 +1,15 @@
 language: python
 env:
     - REPO=tensorflow/benchmarks
-    #- REPO=tensorflow/cleverhans
+    #- REPO=tensorflow/cleverhans                  # No problems found
     - REPO=tensorflow/fold
     - REPO=tensorflow/magenta
     - REPO=tensorflow/models
-    #- REPO=tensorflow/nmt
-    #- REPO=tensorflow/skflow
+    #- REPO=tensorflow/nmt                         # No problems found
+    #- REPO=tensorflow/skflow                      # No problems found
     - REPO=tensorflow/tensor2tensor
-    #- REPO=tensorflow/tensorboard
-    #- REPO=tensorflow/tensorboard-plugin-example
+    #- REPO=tensorflow/tensorboard                 # No problems found
+    #- REPO=tensorflow/tensorboard-plugin-example  # No problems found
     - REPO=tensorflow/tpu-demos
     - REPO=tensorflow/transform
 python:
