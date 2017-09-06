@@ -1,10 +1,11 @@
 language: python
 env:
+    - REPO=tensorflow/tensorflow
+    - REPO=tensorflow/models
     - REPO=tensorflow/benchmarks
     #- REPO=tensorflow/cleverhans                  # No problems found
     - REPO=tensorflow/fold
     - REPO=tensorflow/magenta
-    - REPO=tensorflow/models
     #- REPO=tensorflow/nmt                         # No problems found
     #- REPO=tensorflow/skflow                      # No problems found
     - REPO=tensorflow/tensor2tensor
