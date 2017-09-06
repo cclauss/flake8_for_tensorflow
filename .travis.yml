@@ -13,7 +13,7 @@ env:
     - REPO=tensorflow/tpu-demos
     - REPO=tensorflow/transform
 python:
-    - 2.7.13
+    - 2.7
     - 3.6
 cache: pip
 install:
