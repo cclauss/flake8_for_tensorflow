@@ -1,18 +1,18 @@
 language: python
 env:
-    - REPO=tensorflow/tensorflow
+    ##- REPO=tensorflow/tensorflow
     - REPO=tensorflow/models
-    - REPO=tensorflow/benchmarks
+    ##- REPO=tensorflow/benchmarks
     #- REPO=tensorflow/cleverhans                  # No problems found
-    - REPO=tensorflow/fold
-    - REPO=tensorflow/magenta
+    ##- REPO=tensorflow/fold
+    ##- REPO=tensorflow/magenta
     #- REPO=tensorflow/nmt                         # No problems found
     #- REPO=tensorflow/skflow                      # No problems found
-    - REPO=tensorflow/tensor2tensor
+    ##- REPO=tensorflow/tensor2tensor
     #- REPO=tensorflow/tensorboard                 # No problems found
     #- REPO=tensorflow/tensorboard-plugin-example  # No problems found
-    - REPO=tensorflow/tpu-demos
-    - REPO=tensorflow/transform
+    ##- REPO=tensorflow/tpu-demos
+    ##- REPO=tensorflow/transform
 python:
     - 2.7
     - 3.6
@@ -22,7 +22,7 @@ install:
 before_script:
     - URL=https://github.com/${REPO}
     - echo ; echo -n "flake8 testing of ${URL} on " ; python -V
-    - git clone --depth=50 --branch=master ${URL} ~/${REPO}
+    - git clone --depth=50 --branch=garden ${URL} ~/${REPO}
     - cd ~/${REPO}
 script:
     - echo stop the build if there are Python syntax errors or undefined names
