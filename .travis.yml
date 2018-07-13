@@ -1,18 +1,29 @@
 language: python
 env:
     - REPO=tensorflow/tensorflow
-    - REPO=tensorflow/models
+    - REPO=tensorflow/agents  # has .travis.yml file
     - REPO=tensorflow/benchmarks
-    #- REPO=tensorflow/cleverhans                  # No problems found
+    - REPO=tensorflow/cleverhans  # has .travis.yml file
+    - REPO=tensorflow/compression
     - REPO=tensorflow/fold
+    - REPO=tensorflow/hub
+    - REPO=tensorflow/kfac  # has .travis.yml file
+    - REPO=tensorflow/lattice
     - REPO=tensorflow/magenta
-    #- REPO=tensorflow/nmt                         # No problems found
-    #- REPO=tensorflow/skflow                      # No problems found
-    - REPO=tensorflow/tensor2tensor
-    #- REPO=tensorflow/tensorboard                 # No problems found
-    #- REPO=tensorflow/tensorboard-plugin-example  # No problems found
-    - REPO=tensorflow/tpu-demos
+    - REPO=tensorflow/metadata
+    - REPO=tensorflow/minigo
+    - REPO=tensorflow/models
+    - REPO=tensorflow/moonlight  # has .travis.yml file
+    - REPO=tensorflow/nmt
+    - REPO=tensorflow/probability
+    - REPO=tensorflow/skflow  # has .travis.yml file
+    - REPO=tensorflow/tcav
+    - REPO=tensorflow/tensor2tensor  # has .travis.yml file
+    - REPO=tensorflow/tensorboard  # has .travis.yml file
+    - REPO=tensorflow/tensorboard-plugin-example  # has .travis.yml file
+    - REPO=tensorflow/tpu
     - REPO=tensorflow/transform
+
 python:
     - 2.7
     - 3.6
