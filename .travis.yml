@@ -1,4 +1,6 @@
 language: python
+dist: xenial  # required for Python 3.7
+sudo: true    # required for Python 3.7
 env:
     - REPO=tensorflow/tensorflow
     - REPO=tensorflow/agents  # has .travis.yml file
@@ -25,11 +27,12 @@ env:
     - REPO=tensorflow/transform
 
 python:
-    - 2.7
-    - 3.6
+    #- 2.7
+    #- 3.6
+    - 3.7
 cache: pip
 install:
-    - pip install hacking  # pytest  # add other testing frameworks later
+    - pip install flake8
 before_script:
     - URL=https://github.com/${REPO}
     - echo ; echo -n "flake8 testing of ${URL} on " ; python -V
