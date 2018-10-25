@@ -16,6 +16,7 @@ env:
     - REPO=tensorflow/cleverhans  # has .travis.yml file
     - REPO=tensorflow/compression
     - REPO=tensorflow/lattice
+    - REPO=tensorflow/magenta-demos
     - REPO=tensorflow/metadata
     - REPO=tensorflow/minigo
     - REPO=tensorflow/moonlight  # has .travis.yml file
